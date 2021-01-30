@@ -20,12 +20,10 @@ public class TestUtil extends CrmTestBase{
 		super();
 	}
 	
-	public static String getScreenShot(WebDriver driver, ITestResult result) throws IOException{
+	public static void getScreenShot(WebDriver driver, ITestResult result) throws IOException{
 		des = prop.getProperty("extentReports") + result.getName() + ".png";
 		File desc = new File(des);
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileHandler.copy(src, desc);
-		return des;
-		
 	}
 }

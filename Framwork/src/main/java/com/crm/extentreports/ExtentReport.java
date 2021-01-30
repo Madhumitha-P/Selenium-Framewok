@@ -21,7 +21,8 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class ExtentReport implements IReporter {
 	private ExtentReports extent;
-
+	String imagePath = "C:\\Users\\deenadhayalan\\Desktop\\Java\\Framwork\\src\\main\\java\\com\\crm\\extentreports\\";
+	
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
 			String outputDirectory) {
 		extent = new ExtentReports(outputDirectory + File.separator
@@ -58,7 +59,7 @@ public class ExtentReport implements IReporter {
 
 				if (result.getThrowable() != null) {
 					test.log(status, result.getThrowable());
-					test.log(status, test.addScreenCapture(TestUtil.des));
+					test.log(status, test.addScreenCapture(imagePath + result.getName()+".png"));
 				} else {
 					test.log(status, "Test " + status.toString().toLowerCase()
 							+ "ed");
