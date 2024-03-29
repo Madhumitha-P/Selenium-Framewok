@@ -21,7 +21,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class ExtentReport implements IReporter {
 	private ExtentReports extent;
-	String imagePath = "C:\\Users\\deenadhayalan\\Desktop\\Java\\Framwork\\src\\main\\java\\com\\crm\\extentreports\\";
+	String imagePath = "C:\\Users\\Madhumitha\\Framwork\\src\\main\\java\\com\\crm\\extentreports\\";
 	
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
 			String outputDirectory) {
